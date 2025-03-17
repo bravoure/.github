@@ -1,7 +1,7 @@
 {
     "name": "ClickUp PR Review Integration",
     "description": "Automatically adds tags and comments to ClickUp tasks when a PR is approved or changes are requested.",
-    "iconName": "octicon comment-discussion",
+    "iconName": "octicon check",
     "categories": [
         "automation"
     ]
