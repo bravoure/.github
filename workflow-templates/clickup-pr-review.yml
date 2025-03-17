@@ -1,0 +1,14 @@
+name: ClickUp PR Review Integration
+on:
+  pull_request_review:
+    types: [submitted]
+
+jobs:
+  update-clickup:
+    runs-on: ubuntu-latest
+    if: github.event.review.state == 'approved' || github.event.review.state == 'changes_requested'
+    steps:
+      - uses: bravoure/clickup-pr-review-action@v1
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          clickup-api-key: ${{ secrets.CLICKUP_API_KEY }} 
